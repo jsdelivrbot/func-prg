@@ -1,0 +1,34 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class Person {
+    constructor(ssn, firstname, lastname, birthYear = null, address = null) {
+        this._ssn = ssn;
+        this._firstname = firstname;
+        this._lastname = lastname;
+        this._birthYear = birthYear;
+        this._address = address;
+    }
+    get ssn() {
+        return this._ssn;
+    }
+    get firstname() {
+        return this._firstname;
+    }
+    set firstname(firstname) {
+        this._firstname = firstname;
+    }
+    get lastname() {
+        return this._lastname;
+    }
+    get birthYear() {
+        return this._birthYear;
+    }
+    get address() {
+        return this._address;
+    }
+    get fullname() {
+        return `${this._firstname} ${this._lastname}`;
+    }
+}
+exports.Person = Person;
+//# sourceMappingURL=Person.js.map
