@@ -10,6 +10,11 @@ class Wrapper {
     map(f) {
         return Wrapper.of(f(this.value));
     }
+    join() {
+        return this.value instanceof Wrapper
+            ? this.value.join()
+            : this;
+    }
     toString() {
         return `Wrapper (${this.value})`;
     }

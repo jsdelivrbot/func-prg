@@ -15,6 +15,9 @@ const findStudents = R.curry((db, snn) => wrapper_1.wrap(find(db, snn)));
 const getFirstName = (student) => wrapper_1.wrap(student.map(R.prop("firstname")));
 // [["firstname" of Student]]
 const result = R.compose(getFirstName, findStudents(db_helper_1.db));
-const test = result("444444444");
-console.log(test);
+const test = result("444444444").join();
+// console.log(test);
+const wrapped = wrapper_1.Wrapper.of(wrapper_1.Wrapper.of(wrapper_1.Wrapper.of("test")));
+// [[["test"]]]
+console.log(wrapped.join());
 //# sourceMappingURL=ch05-2.js.map

@@ -15,4 +15,4 @@ export class Student extends Person {
 	get school() {
 		return this._school;
 	}
-};
+}

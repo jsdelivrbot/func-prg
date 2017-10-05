@@ -15,5 +15,4 @@ class Student extends Person_1.Person {
     }
 }
 exports.Student = Student;
-;
 //# sourceMappingURL=Student.js.map

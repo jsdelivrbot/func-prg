@@ -19,6 +19,11 @@ const getFirstName = (student: any) => wrap(student.map(R.prop("firstname")));
 
 const result = R.compose(getFirstName, findStudents(db));
 
-const test = result("444444444");
+const test = result("444444444").join();
 
-console.log(test);
+// console.log(test);
+
+const wrapped = Wrapper.of(Wrapper.of(Wrapper.of("test")));
+// [[["test"]]]
+
+console.log(wrapped.join());
