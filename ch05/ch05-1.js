@@ -10,4 +10,4 @@ const five = new wrapper_1.Wrapper(5);
 const result = two.map(plus3).map(plus10);
 // [[[2].map(plus3(2))].map(plus10(5))]
 console.log(result);
-//# sourceMappingURL=ch05.1.js.map
+//# sourceMappingURL=ch05-1.js.map
