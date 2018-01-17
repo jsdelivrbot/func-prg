@@ -24,8 +24,10 @@
     "@types/jquery": "^3.2.13",
     "@types/lodash": "^4.14.77",
     "@types/ramda": "^0.24.14",
+    "@types/underscore": "1.8.7",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
-    "ramda": "^0.24.1"
+    "ramda": "^0.24.1",
+    "underscore": "1.8.3"
   }
 }

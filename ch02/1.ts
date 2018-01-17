@@ -7,8 +7,13 @@ var turing = new Student("222-22-2222", "Alan", "Turing", 1981, new Address("Eng
 var church = new Student("333-33-3333", "Alonzo", "Church", 1971, new Address("England"), "Princeton");
 var kleene = new Student("444-44-4444", "Stephen", "Kleene", 1988, new Address("US"), "Princeton");
 
-var selector = (country: string, school: string) => (student: Student) => student.address.country === country && student.school === school;
-var findStudentsBy = (friends, selector) => friends.filter(selector);
+var selector = function (country: string, school: string) {
+    return function (student: Student) {
+        return student.address.country === country && student.school === school;
+    };
+};
+
+var findStudentsBy = (friends : Student[], predicte: (s:Student) => boolean) => friends.filter(predicte);
 
 var result = findStudentsBy([curry, turing, church, kleene], selector("England", "Princeton"));
 
