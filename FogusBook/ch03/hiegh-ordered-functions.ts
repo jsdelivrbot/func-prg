@@ -11,13 +11,14 @@ function finder(getValue, getBest, coll) {
     });
 }
 
-//var pluker = (field: string) => (obj: {}) => obj && obj[field];
-//console.log(finder(pluker("age"), Math.min, people));
+// var pluker = (field: string) => (obj: {}) => obj && obj[field];
+// console.log(finder(pluker("age"), Math.min, people));
 
 // implementation of a cleaner best function of finder
 function bestFinder(coll, bestFn) {
     return _.reduce(coll, (x, y) => bestFn(x, y) ? x : y);
 }
 
-console.log(bestFinder(people, (p1, p2) => p1.age > p2.age));
-console.log(bestFinder([1, 2, 3, 4, 4, 5, 6, 7], (x, y) => x > y));
+// console.log(bestFinder(people, (p1, p2) => p1.age > p2.age));
+// console.log(bestFinder([1, 2, 3, 4, 4, 5, 6, 7], (x, y) => x > y));
+//------------------------------------------------------------------------------------------------------------------------

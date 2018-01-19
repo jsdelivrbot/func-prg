@@ -15,8 +15,8 @@ const safeFindObject = R.curry((db: DB, id: string) => Either.fromNullable(db.fi
 const findStudenat = safeFindObject(db);
 const csv = (arr: string[]) => arr.join(",");
 
-const showStudent = (snn) =>
-    Maybe.fromNullable(snn)
-        .chain(checkLengthSnn)        
-        .chain(safeFindObject(findStudenat("111-11-1111"))
-        .map(R.props(["ssn", "firstname", "lastname"]))
+// const showStudent = (snn) =>
+//     Maybe.fromNullable(snn)
+//         .chain(checkLengthSnn)        
+//         .chain(safeFindObject(findStudenat("111-11-1111"))
+//         .map(R.props(["ssn", "firstname", "lastname"]))
