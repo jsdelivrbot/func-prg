@@ -10,6 +10,4 @@ var chainB = new lazy_chain_1.LazyChain(["Hello world"])
     .invoke("join", "")
     .invoke("split", "")
     .invoke("reverse");
-var chainC = chainA.chain(chainB).tap(x => console.log(x)).force();
-var stop = 1;
 //# sourceMappingURL=lazy-chain-test.js.map

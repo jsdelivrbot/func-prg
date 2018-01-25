@@ -25,22 +25,7 @@ export class LazyChain {
 
         return this;
     }
-
-    getThunks() {
-        return this.thunks.slice();
-    }
-
-    chain(lazyChain: LazyChain): this {
-        if (lazyChain instanceof LazyChain === false) return;
-
-        let thunks = lazyChain.getThunks();
-        if (thunks.length) {
-            this.thunks.push(...thunks);
-        }
-
-        return this;
-    }
-
+ 
     force() {
         return this.thunks.reduce((target: object, thunk: Function) => {
             return thunk(target);

@@ -10,8 +10,6 @@ var chainA = new LazyChain([2, 6, 1, 0, 10])
 var chainB = new LazyChain(["Hello world"])
     .invoke("join", "")
     .invoke("split", "")
-    .invoke("reverse");        
+    .invoke("reverse");     
 
-var chainC = chainA.chain(chainB).tap(x => console.log(x)).force();    
-
-var stop = 1;    
+   
